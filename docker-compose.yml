@@ -12,23 +12,8 @@ services:
       - MYSQL_DATABASE_USER=test
       - MYSQL_DATABASE_PASSWORD=root
       - MYSQL_DATABASE_NAME=couponsdbx
-    depends_on:
-      - mysql-db
     volumes:
       - poetry-cache:/root/.cache/pypoetry
 
-  mysql-db:
-    image: mysql:8.0
-    environment:
-      - MYSQL_DATABASE=couponsdbx
-      - MYSQL_USER=test
-      - MYSQL_PASSWORD=root
-      - MYSQL_ROOT_PASSWORD=root
-    ports:
-      - "3306:3306"
-    volumes:
-      - mysql_data:/var/lib/mysql
-
 volumes:
-  mysql_data:
   poetry-cache:
