@@ -3,7 +3,7 @@ version: '3.8'
 services:
   mcp-mysql:
     image: lclpedro/mcp-mysql:latest
-    container_name: mcp-mysql
+    container_name: testmcpsql
     ports:
       - "3002:3002"
     environment:
